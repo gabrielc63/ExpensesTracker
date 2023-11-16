@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  root 'home#index'
   get '/service-worker.js', to: 'service_workers/workers#index'
   get '/manifest.json', to: 'service_workers/manifests#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -9,5 +8,6 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root 'home#index'
+  resources :categories
 end
