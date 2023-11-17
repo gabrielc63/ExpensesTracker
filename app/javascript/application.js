@@ -3,5 +3,10 @@
 import "@hotwired/turbo-rails";
 // import "./controllers";
 import "bootstrap";
-// import "bootstrap/dist/css/bootstrap.min.css";
-//
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/service-worker.js', { scope: './' })
+                           .then(function(registration) {
+                             console.log('[Companion]', 'Service worker registered!')
+                             console.log(registration)
+                           })
+  }
