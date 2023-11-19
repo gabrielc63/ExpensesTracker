@@ -60,7 +60,6 @@ group :development do
   # gem "spring"
 end
 
-
+gem "devise"
 gem "jsbundling-rails", "~> 1.2"
-
 gem "cssbundling-rails", "~> 1.3"
